@@ -41,7 +41,11 @@ class _CurrentViewState extends State<CurrentView> {
   @override
   Widget build(BuildContext context) {
     return CantonScaffold(
-      backgroundColor: CantonMethods.alternateCanvasColor(context, index: _currentIndex, targetIndexes: [0, 1]),
+      backgroundColor: CantonMethods.alternateCanvasColor(
+        context,
+        index: _currentIndex,
+        targetIndexes: [0, 1],
+      ),
       bottomNavBar: BottomNavBar(_currentIndex, _onTabTapped),
       padding: EdgeInsets.zero,
       safeArea: false,

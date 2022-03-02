@@ -19,14 +19,37 @@ class _CategoryListViewState extends State<CategoryListView> {
     );
   }
 
-  List<String> categories = [
-    'Business',
-    'Entertainment',
-    'General',
-    'Health',
-    'Science',
-    'Sports',
-    'Technology',
+  // List<String> categories = [
+  //   'Business',
+  //   'Entertainment',
+  //   'General',
+  //   'Health',
+  //   'Science',
+  //   'Sports',
+  //   'Technology',
+  // ];
+  List<Map<String, String>> categories = [
+    {
+      'Business': 'Business',
+    },
+    {
+      'Entertainment': 'Entertainment',
+    },
+    {
+      'General': 'General',
+    },
+    {
+      'Health': 'Health',
+    },
+    {
+      'Science': 'Science',
+    },
+    {
+      'Sports': 'Sports',
+    },
+    {
+      'Technology': 'Technology',
+    },
   ];
 
   Widget _content(BuildContext context) {
@@ -43,7 +66,11 @@ class _CategoryListViewState extends State<CategoryListView> {
     return Expanded(
       child: ListView.separated(
         itemBuilder: (context, index) {
-          return CategoryCard(Source(category: categories[index]));
+          return CategoryCard(
+            Source(
+              category: categories[index].values.first,
+            ),
+          );
         },
         separatorBuilder: (context, index) {
           return SizedBox(height: 7);

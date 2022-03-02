@@ -21,12 +21,17 @@ class CategoryCard extends StatelessWidget {
                 padding: const EdgeInsets.all(5),
                 child: Text(
                   source.category!.substring(0, 1),
-                  style: Theme.of(context).textTheme.headline5!.copyWith(color: Theme.of(context).primaryColor),
+                  style: Theme.of(context).textTheme.headline5!.copyWith(
+                        color: Theme.of(context).primaryColor,
+                      ),
                 ),
               ),
               SizedBox(width: 7),
               Expanded(
-                child: Text(source.category!, style: Theme.of(context).textTheme.headline6),
+                child: Text(
+                  source.category!,
+                  style: Theme.of(context).textTheme.headline6,
+                ),
               ),
             ],
           ),

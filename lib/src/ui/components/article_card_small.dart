@@ -58,14 +58,16 @@ class ArticleCardSmall extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: Text(
-                article.getPublishedAtFormattedTime,
-                style: Theme.of(context).textTheme.caption!.copyWith(
-                      color: Theme.of(context).colorScheme.secondaryVariant,
-                      fontWeight: FontWeight.w400,
-                    ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Text(
+                  article.getPublishedAtFormattedTime,
+                  style: Theme.of(context).textTheme.caption!.copyWith(
+                        color: Theme.of(context).colorScheme.secondary,
+                        fontWeight: FontWeight.w400,
+                      ),
+                ),
               ),
             ),
           ],

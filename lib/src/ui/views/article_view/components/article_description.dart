@@ -14,7 +14,13 @@ class ArticleDescription extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 27),
-          child: Text(!source ? article.title!.substring(0, article.title!.indexOf(' - ')) : article.title!,
+          child: Text(
+              !source
+                  ? article.title!.substring(
+                      0,
+                      article.title!.indexOf(' - '),
+                    )
+                  : article.title!,
               style: Theme.of(context).textTheme.headline4),
         ),
         SizedBox(height: 12),
@@ -39,7 +45,7 @@ class ArticleDescription extends StatelessWidget {
 
   String authorName() {
     return [null, '', 'http', 'HTTP'].contains(article.author)
-        ? 'BY UNKNOWN'
+        ? 'By Unknown'
         : article.author!.toUpperCase().contains('BY ')
             ? article.author!.toUpperCase()
             : article.author!.contains(',')

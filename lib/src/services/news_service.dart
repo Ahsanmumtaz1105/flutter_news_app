@@ -17,9 +17,7 @@ class NewsService {
         response.data['articles'],
       );
 
-      final List<Article> articles = results
-          .map((articleData) => Article.fromMap(articleData))
-          .toList(growable: false);
+      final List<Article> articles = results.map((articleData) => Article.fromMap(articleData)).toList(growable: false);
 
       return articles;
     } on DioError catch (e) {
@@ -35,9 +33,7 @@ class NewsService {
         response.data['sources'],
       );
 
-      final List<Source> sources = results
-          .map((sourceData) => Source.fromMap(sourceData))
-          .toList(growable: false);
+      final List<Source> sources = results.map((sourceData) => Source.fromMap(sourceData)).toList(growable: false);
 
       return sources;
     } on DioError catch (e) {

@@ -10,7 +10,7 @@ class NewsExceptions implements Exception {
         message = "Connection timeout with API server";
         break;
       case DioErrorType.other:
-        message = "Error retirieving articles";
+        message = "Error retrieving articles";
         break;
       case DioErrorType.receiveTimeout:
         message = "Receive timeout in connection with API server";

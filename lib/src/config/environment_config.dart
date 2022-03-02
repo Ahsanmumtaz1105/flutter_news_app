@@ -1,3 +1,3 @@
 class EnvironmentConfig {
-  String newsApiKey = 'YOUR_API_KEY_HERE';
+  String newsApiKey = 'cc51ad3714ad4fc683773520c36ec80f';
 }

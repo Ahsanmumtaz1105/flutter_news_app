@@ -43,7 +43,10 @@ class ArticleView extends StatelessWidget {
   Widget _body(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 27),
-      child: Text(article.content ?? 'No Content', style: Theme.of(context).textTheme.bodyText1),
+      child: Text(
+        article.content ?? 'No Content',
+        style: Theme.of(context).textTheme.bodyText1,
+      ),
     );
   }
 }
